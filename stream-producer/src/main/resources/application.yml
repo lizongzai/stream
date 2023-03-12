@@ -17,8 +17,11 @@ spring:
         # 与 org.springframework.cloud.stream.messaging.Source 中的 @Output("output") 注解的 value 相同
         output:
           destination: stream.message # 绑定的交换机名称
-        my_output:
-          destination: my.message # 绑定的交换机名称
+          producer:
+            partition-key-expression: payload # 配置分区键的表达式规则
+            partition-count: 2 # 配置消息分区的数量
+#        my_output:
+#          destination: my.message # 绑定的交换机名称
 
 # 配置 Eureka Server 注册中心
 eureka:

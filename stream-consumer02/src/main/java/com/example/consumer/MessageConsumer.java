@@ -1,6 +1,5 @@
 package com.example.consumer;
 
-import com.example.channel.MySink;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;

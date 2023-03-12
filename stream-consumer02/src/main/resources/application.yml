@@ -1,5 +1,5 @@
 server:
-  port: 8002 # 端口
+  port: 8003 # 端口
 
 spring:
   application:
@@ -13,7 +13,7 @@ spring:
   cloud:
     stream:
       instance-count: 2 # 消费者总数
-      instance-index: 0 # 当前消费者的索引
+      instance-index: 1 # 当前消费者的索引
       bindings:
         # 消息接收通道
         # 与 org.springframework.cloud.stream.messaging.Sink 中的 @Input("input") 注解的 value 相同

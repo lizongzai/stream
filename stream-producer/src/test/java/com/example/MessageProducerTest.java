@@ -19,7 +19,9 @@ public class MessageProducerTest {
 
     @Test
     public void testSend() {
-        messageProducer.send("hello spring cloud stream");
+        for (int i=0; i<15;i++) {
+            messageProducer.send("hello spring cloud stream" + ": " + i);
+        }
     }
 
     @Test

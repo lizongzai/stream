@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
  * 消息生产者
  */
 @Component
-@EnableBinding({MySource.class})
+@EnableBinding({Source.class})
 public class MessageProducer {
 
     @Autowired
-    private MySource mySource;
+    private Source source;
 
     /**
      * 发送消息
@@ -23,7 +23,7 @@ public class MessageProducer {
      * @param message
      */
     public void send(String message) {
-        mySource.myOutput().send(MessageBuilder.withPayload(message).build());
+        source.output().send(MessageBuilder.withPayload(message).build());
     }
 
 }

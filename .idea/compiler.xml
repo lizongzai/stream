@@ -9,6 +9,7 @@
         <module name="stream-producer" />
         <module name="eureka-server01" />
         <module name="eureka-server02" />
+        <module name="stream-consumer02" />
         <module name="stream-consumer" />
       </profile>
     </annotationProcessing>
